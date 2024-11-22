@@ -1,7 +1,8 @@
 # money tree calculator
-balance = 1000
+starting_balance = 1000
+balance = starting_balance
 rate = 0.02
-withdrawal = 200
+withdrawal = 250
 goal = 1e6
 month = 0
 
@@ -19,7 +20,7 @@ while balance < goal:
     print(f"{month:<15}{balance:10,.2f}")
 
 years = month / 12
-CAGR = (balance / 1000) ** (1/years) - 1
+CAGR = (balance / starting_balance) ** (1/years) - 1
 
 print("-" * 25)
 print(f"It took {years:.1f} years")
